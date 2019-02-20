@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Part1 {
+
+    public static void main(String[] args) {
+        for (int counter = 167; counter <= 167; counter++) {
+            List<Integer> queue = new LinkedList<>();
+            System.out.println("Playing with " + counter + " elves.");
+            for(int i = 1; i <= counter; i++){
+                queue.add(i);
+            }
+
+
+
+            while(true){
+                Collections.rotate(queue, -1);
+                queue.remove(0);
+                if(queue.size()==1){
+                    break;
+                }
+            }
+            System.out.println("Winner: " + queue.get(0));
+
+        }
+
+
+        System.out.println("done!");
+    }
+}
